@@ -1,0 +1,858 @@
+<html lang="es"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style type="text/css" id="dark-mode-custom-style" lang="en"></style><style type="text/css" id="dark-mode-native-style" lang="en"></style><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <!-- ./fonts -->
+
+    <!-- css -->
+    <style type="text/css">
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        html[lang=nl] .sidebar {
+            padding-left: 15px;
+        }
+        html[lang=nl] .sidebar--label {
+            display: inline-block;
+            width: 100%;
+            max-width: 106px;
+            margin-top: -2px;
+        }
+        html[lang=nl] .sidebar--item-align-right {
+            display: inline-block;
+            margin-right: 10px;
+            width: 60px;
+            text-align: right;
+        }
+
+        body {
+            width: 21cm;
+            height: 100%;
+            min-height: 29.7cm;
+            position: relative;
+            margin: 0;
+            padding: 0 0;
+            color: #333333;
+            line-height: 22px;
+         font: 12px "Source Sans Pro", Arial;
+                    font-style: normal;
+        }
+
+        h1 {
+            font-style: normal;
+            font-size: 30px;
+            margin: 0 0 20px 0;
+            padding: 13px 0 15px 0;
+            font-weight: 600;
+            border-bottom: 1px solid #d2d2d2;
+        }
+        h1 span {
+            position: relative;
+            font-style: normal;
+            display: inline;
+            margin-right: 1px;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+            max-width: 430px;
+        }
+
+        p {
+            color: #4c4c4c;
+            line-height: 18px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background: #d2d2d2;
+        }
+
+        .section--first-name {
+            display: inline-block;
+        }
+
+        .section--last-name {
+            display: inline-block;
+            position: relative;
+            left: 5px;
+        }
+
+        .sections {
+            left: 235px;
+            position: relative;
+            width: 535px;
+        }
+
+        .section {
+            position: relative;
+            width: 100%;
+            padding: 0;
+        }
+        .section p {
+            display: block;
+            font-style: normal;
+        }
+        .section:last-child {
+            border: none;
+        }
+        .section.section--summary {
+            margin-top: -10px;
+        }
+
+        .section--title {
+            display: block;
+            position: relative;
+            z-index: 99;
+            margin: 0 0 0 0;
+            font-weight: 600;
+            background: #fff;
+            padding: 15px 0 15px 0;
+            page-break-inside: avoid;
+            border-bottom: 1px solid #d2d2d2;
+        }
+        .section--title span {
+            display: inline-block;
+            margin-right: 0px;
+        }
+
+        .section--heading-group {
+            display: block;
+            padding: 15px 0 0 0;
+            margin: 0;
+            /*page-break-inside: avoid;*/
+        }
+
+        .section--list {
+            display: block;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .section--list.skills {
+            padding-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .section--item {
+            display: block;
+            position: relative;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .section--item.skills {
+            display: inline-block;
+            padding-top: 8px;
+            padding-bottom: 0;
+            width: 100%;
+            margin: 0;
+            padding-left: 5px;
+        }
+        .section--item.skills h3 {
+            font-size: 13px;
+        }
+        .section--item.skills:last-child {
+            padding-bottom: 0;
+        }
+
+        .skills--label {
+            display: inline-block;
+            width: 175px;
+            margin: 5px 0 0 -5px;
+        }
+
+        .skills--level {
+            display: inline-block;
+            position: relative;
+            top: 0;
+            height: 7px;
+            width: 150px;
+            padding: 0;
+            margin: 0;
+            background: #eaeaea;
+            border-radius: 6px;
+        }
+
+        .skills--level-filler {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #b1b1b1;
+            border-radius: 6px;
+        }
+
+        .skills--stars {
+            display: inline-block;
+            position: relative;
+            top: 4px;
+        }
+        .skills--stars svg {
+            fill: #b1b1b1;
+        }
+        .skills--stars svg.active {
+            fill: #2b2b38;
+        }
+
+        .section--date {
+            position: absolute;
+            right: 0;
+            text-align: right;
+            top: 16px;
+            width: 125px;
+             width: 125px;            font-size: 13px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section--heading {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section--sub-heading {
+            display: block;
+            padding: 3px 0 0 0;
+            margin: 0;
+            font-style: italic;
+            font-size: 13px;
+        }
+
+        .section--content {
+            display: block;
+            padding: 5px 0 0 0;
+            margin: 0;
+        }
+        .section--content p {
+            display: block;
+        }
+        .section--content ul, .section--content ol {
+            white-space: normal;
+            font-weight: 400;
+            list-style-position: outside;
+            color: #4c4c4c;
+            margin: 0;
+            padding: 0 0 0 16px;
+            text-align: left;
+        }
+        .section--content ul li, .section--content ol li {
+            line-height: 18px;
+        }
+        .section--content ul li strong, .section--content ol li strong {
+            display: inline-block;
+            text-align: left;
+        }
+        .section--content ul li {
+            list-style-type: disc;
+        }
+        .section--content ol {
+            padding-left: 14px;
+        }
+
+        .section--content-single-textarea {
+            padding-top: 10px;
+        }
+
+        .sidebar--bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 215px;
+            background: #2b2b38;
+            height: 18000px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .sidebar {
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            color: #fff;
+            padding: 29px 0 0 20px;
+            width: 215px;
+            height: auto;
+        }
+        .sidebar.sidebar--no-avatar {
+            padding-top: 16px;
+        }
+
+        .avatar {
+            display: inline-block;
+            padding: 0;
+            margin: 0 0 0 9px;
+            height: 155px;
+            width: 155px;
+            border-radius: 50%;
+            background-size: cover !important;
+        }
+
+        .sidebar--data {
+            display: block;
+        }
+
+        .sidebar--title {
+            font-size: 15px;
+            font-style: normal;
+            padding: 20px 0 11px 0;
+            margin: 0 0 10px 0;
+            page-break-inside: avoid;
+            border-bottom: 1px solid #fff;
+        }
+        .sidebar--title span {
+            font-weight: 400;
+            font-style: normal;
+            margin-right: 0px;
+        }
+
+        .sidebar--title svg {
+            position: relative;
+            top: 4px;
+            margin-right: 4px;
+        }
+
+        .sidebar--label {
+            font-weight: 600;
+        }
+
+        .sidebar--list {
+            display: block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar--item {
+            display: block;
+            list-style: none;
+            font-size: 12px;
+            margin: 0;
+            page-break-inside: avoid;
+            padding: 8px 5px 0 0;
+        }
+        .sidebar--item:last-child {
+            padding-bottom: 0;
+        }
+
+        .sidebar--item-text {
+            line-height: 21px;
+        }
+
+        .sidebar--item-align-right {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .c--434a54 .sidebar--bg, .c--434a54 .skills--level-filler {
+            background: #434a54 !important;
+        }
+
+        .c--efa100 .sidebar--bg, .c--efa100 .skills--level-filler {
+            background: #efa100 !important;
+        }
+
+        .c--3f6592 .sidebar--bg, .c--3f6592 .skills--level-filler {
+            background: #3f6592 !important;
+        }
+
+        .c--d770ad .sidebar--bg, .c--d770ad .skills--level-filler {
+            background: #d770ad !important;
+        }
+
+        .c--da4453 .sidebar--bg, .c--da4453 .skills--level-filler {
+            background: #da4453 !important;
+        }
+
+        strong { white-space: nowrap; }
+
+    </style>
+    <!-- ./css -->
+
+</head>
+<body class="c--434a54">
+
+<div class="sidebar--bg"></div>
+
+<aside class="sidebar  ">
+
+            <div class="avatar" style="background:url('https://cvmaker-storage.s3.eu-west-3.amazonaws.com/img/avatar/8a2dae382333c25ed061ef2fdb20bda0e47ed3ac.jpg') no-repeat;">&nbsp;
+        </div>
+    
+
+    <div class="sidebar--data">
+        <h2 class="sidebar--title">
+            Personal
+        </h2>
+
+        <ul class="sidebar--list">           
+
+                            <li class="sidebar--item">
+                    <span class="sidebar--label">Celular</span><br>
+                    959553570
+                </li>
+            
+
+            <li class="sidebar--item">
+                <span class="sidebar--label">E-Mail</span><br>
+                marcelodaros94@gmail.com
+            </li>
+
+            
+            
+            
+            
+            
+
+            
+            
+                            <li class="sidebar--item">
+                    <span class="sidebar--label">LinkedIn</span><br>
+                    https://www.linkedin.com/in/marcelo-da-ros/
+                </li>
+                    </ul>
+
+    </div>
+
+    
+
+        
+    
+
+        
+    
+
+        
+            
+
+        
+    
+
+        
+                            <div class="sidebar--data">
+                    <h2 class="sidebar--title">
+                        Idiomas
+                    </h2>
+
+                    <ul class="sidebar--list">
+                                                                                    <li class="sidebar--item">
+                                    <span class="sidebar--label">Español</span>
+                                    <span class="sidebar--item-align-right">Nativo</span>
+                                </li>
+                                                                                                                <li class="sidebar--item">
+                                    <span class="sidebar--label">English</span>
+                                    <span class="sidebar--item-align-right">Avanzado</span>
+                                </li>
+                                                                        </ul>
+
+                </div>
+            
+        
+    
+
+        
+    
+
+        
+
+            
+                <div class="sidebar--data">
+                <h2 class="sidebar--title">
+                    Skills
+                </h2>
+
+                <ul class="sidebar--list">
+                                                                        <li class="sidebar--item">
+                                <span class="sidebar--label">Proactividad</span>
+                            </li>
+                                                                                                <li class="sidebar--item">
+                                <span class="sidebar--label">Liderazgo</span>
+                            </li>
+                                                                                                <li class="sidebar--item">
+                                <span class="sidebar--label">Comunicación</span>
+                            </li>
+                                                                                                <li class="sidebar--item">
+                                <span class="sidebar--label">Resolución de problemas</span>
+                            </li>
+                                                                                                <li class="sidebar--item">
+                                <span class="sidebar--label">Delegación</span>
+                            </li>
+                                                                                                <li class="sidebar--item">
+                                <span class="sidebar--label">Trabajo en equipo</span>
+                            </li>
+                                                                                                <li class="sidebar--item">
+                                <span class="sidebar--label">Adaptabilidad</span>
+                            </li>
+                                            
+                </ul>
+
+            </div>
+                    
+    
+
+        
+    
+
+        
+    
+
+        
+    
+
+        
+    
+</aside>
+
+<section class="sections">
+
+    <div class="section--name">
+        <h1>
+                            Marcelo Da Ros
+                    </h1>
+    </div>
+
+    
+        
+            
+                <div class="section">
+
+                    <div class="section--title">
+                        <h2>
+                            Experiencia laboral
+                        </h2>
+                    </div>
+
+                    <div class="section--time-line-overlay"></div>
+
+                    <ol class="section--list">
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">mar 2020 - Actualidad</div>
+                                    <div class="section--heading">
+                                        <h3>Lead Developer</h3>
+                                    </div>
+                                    <div class="section--sub-heading">
+                                        Impulse                                    </div>
+                                </div>
+                                                                    <div class="section--content">
+                                        <p>Desarrollo de sitios web con Hubspot. Integraciones del CRM con otras aplicaciones a través de Laravel APIs. Mantenimiento de páginas hechas con Wordpress y VTEX. Despliegues en AWS.</p>
+                                    </div>
+                                                            </li>
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">jun 2018 - mar 2020</div>
+                                    <div class="section--heading">
+                                        <h3>PHP Developer</h3>
+                                    </div>
+                                    <div class="section--sub-heading">
+                                        Bitel                                </div>
+                                </div>
+                                                                    <div class="section--content">
+                                        <p>Creación de landing pages consumiendo web services. Despliegue y mejora continua de aplicaciones en Laravel, Symfony, Drupal y Wordpress</p>
+                                    </div>
+                                                            </li>
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">oct 2016 - jun 2018</div>
+                                    <div class="section--heading">
+                                        <h3>PHP Developer</h3>
+                                    </div>
+                                    <div class="section--sub-heading">
+                                        Dezain                                    </div>
+                                </div>
+                                                                    <div class="section--content">
+                                        <p>Desarrollo de páginas y sistemas web con el framework Laravel. Mantenimiento de tiendas en Shopify. Integraciones con pasarela de pago Culqi.</p>
+                                    </div>
+                                                            </li>
+                                            </ol>
+                </div>
+            
+        
+
+    
+        
+            
+                <div class="section">
+
+                    <div class="section--title">
+                        <h2>
+                            Estudios y certificaciones
+                        </h2>
+                    </div>
+
+                    <ol class="section--list">
+                        
+                        <li class="section--item">
+                            <div class="section--heading-group">
+                                <div class="section--date">
+                                    abr 2012 - dic 2016
+                                </div>
+                                <div class="section--heading">
+                                    <h3>Ingeniería Informática</h3>
+                                </div>
+                                <div class="section--sub-heading">
+                                    Universidad Nacional Federico Villarreal, Lima                                </div>
+
+                                                                    <div class="section--content">
+                                        <p>Título profesional</p>
+                                    </div>
+                                                            </div>
+                        </li>
+                        
+                        <li class="section--item">
+                            <div class="section--heading-group">
+                                <div class="section--date">
+                                    oct 2019 - feb 2020
+                                </div>
+                                <div class="section--heading">
+                                    <h3>Fullstack Developer</h3>
+                                </div>
+                                <div class="section--sub-heading">
+                                    Area 51 Training Center, Lima                                </div>
+
+                                                                    <div class="section--content">
+                                        <p>Certificación internacional en NodeJS y Angular</p>
+                                    </div>
+                                                            </div>
+                        </li>
+                                            </ol>
+
+                </div>
+            
+        
+
+    
+        
+            
+                <div class="section">
+
+                    <div class="section--title">
+                        <h2>
+                            Destrezas
+                        </h2>
+                    </div>
+
+                    <div class="section--time-line-overlay"></div>
+
+                    <ol class="section--list skills">
+
+                                                                                    <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>Frontend</h3>
+                                    </div>
+                                    <div class="skills--level">
+                                        <div class="skills--level-filler" style="width:75%;"></div>
+                                    </div>
+                                </li>
+                                                                                                                <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>PHP</h3>
+                                    </div>
+                                    <div class="skills--level">
+                                        <div class="skills--level-filler" style="width:75%;"></div>
+                                    </div>
+                                </li>
+                                                                                                                <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>Javascript</h3>
+                                    </div>
+                                    <div class="skills--level">
+                                        <div class="skills--level-filler" style="width:75%;"></div>
+                                    </div>
+                                </li>
+                                                                                                                <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>Base de datos</h3>
+                                    </div>
+                                    <div class="skills--level">
+                                        <div class="skills--level-filler" style="width:50%;"></div>
+                                    </div>
+                                </li>
+                                                                                                                <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>User Experience</h3>
+                                    </div>
+                                    <div class="skills--level">
+                                        <div class="skills--level-filler" style="width:50%;"></div>
+                                    </div>
+                                </li>
+                                                                                                                <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>Responsive Design</h3>
+                                    </div>
+                                    <div class="skills--level">
+                                        <div class="skills--level-filler" style="width:75%;"></div>
+                                    </div>
+                                </li>
+                                                    
+                    </ol>
+
+                </div>
+            
+        
+
+    
+        
+            
+        
+
+    
+        
+                            <div class="section">
+
+                    <div class="section--title">
+                        <h2>Cursos</h2>
+                    </div>
+
+                    <div class="section--time-line-overlay"></div>
+
+                    <ol class="section--list">
+
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">
+                                        2021
+                                    </div>
+                                    <div class="section--heading">
+                                        <h3>Amazon Web Services</h3>
+                                    </div>
+                                    <div class="section--sub-heading">Platzi</div>
+
+                                                                    </div>
+                            </li>
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">
+                                        2021
+                                    </div>
+                                    <div class="section--heading">
+                                        <h3>Especialización en Marketing Digital</h3>
+                                    </div>
+                                    <div class="section--sub-heading">Platzi</div>
+
+                                                                    </div>
+                            </li>
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">
+                                        2021
+                                    </div>
+                                    <div class="section--heading">
+                                        <h3>UX para E-Commerce</h3>
+                                    </div>
+                                    <div class="section--sub-heading">Platzi</div>
+
+                                                                    </div>
+                            </li>
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">
+                                        2021
+                                    </div>
+                                    <div class="section--heading">
+                                        <h3>Arquitectura Backend</h3>
+                                    </div>
+                                    <div class="section--sub-heading">Platzi</div>
+
+                                                                    </div>
+                            </li>
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">
+                                        2021
+                                    </div>
+                                    <div class="section--heading">
+                                        <h3>Magento</h3>
+                                    </div>
+                                    <div class="section--sub-heading">Platzi</div>
+
+                                                                    </div>
+                            </li>
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">
+                                        2020
+                                    </div>
+                                    <div class="section--heading">
+                                        <h3>VPS Linux - Digital Ocean</h3>
+                                    </div>
+                                    <div class="section--sub-heading">Udemy</div>
+
+                                                                    </div>
+                            </li>
+                                                    <li class="section--item">
+                                <div class="section--heading-group">
+                                    <div class="section--date">
+                                        2020
+                                    </div>
+                                    <div class="section--heading">
+                                        <h3>User Experience</h3>
+                                    </div>
+                                    <div class="section--sub-heading">Netzun</div>
+
+                                                                    </div>
+                            </li>
+                                            </ol>
+                </div>
+            
+
+        
+
+    
+        
+
+    
+        
+            
+        
+
+    
+        
+
+    
+        
+            
+        
+
+    
+        
+
+    
+
+</section>
+
+
+
+</body></html>
